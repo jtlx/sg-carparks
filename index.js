@@ -7,4 +7,4 @@ app.get('/', (req, res) => res.sendFile(__dirname + '/public/map.html'))
 app.use(express.static('public'))
 app.use('/temp', express.static('temp'))
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`App listening on port ${port}!`))
