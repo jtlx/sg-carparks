@@ -19,7 +19,7 @@ $.getJSON("./temp/carpark_data.json", function(data) {
         }).fitBounds(startBounds);
 
         var baseMap = L.tileLayer('//a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-            attribution: '',
+            attribution: '<a href="https://www.mytransport.sg/content/mytransport/home/dataMall.html">LTA Datamall</a>',
             maxZoom: 17
         });
 
