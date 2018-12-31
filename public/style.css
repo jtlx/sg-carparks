@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#mcmap {
+    height: 100%;
+    width: 100%;
+}
+#indicator-box{
+    z-index: 99;
+    position: absolute;
+    height: 40px;
+    width: 170px;
+    background-color: rgba(255,255,255,0.8);
+    bottom: 30px;
+    right: 0px;
+    padding: 8px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
