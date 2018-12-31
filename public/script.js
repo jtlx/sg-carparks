@@ -61,19 +61,17 @@ $.getJSON("./temp/carpark_data.json", function(data) {
                 var circleSvgs = selection.selectAll('circle').data(points).enter();
                 circleSvgs.append('circle')
                     .attr('cx', function(d) { return projection.latLngToLayerPoint(d.latlng).x })
-                    .attr('cy', function(d) {console.log('re'); return projection.latLngToLayerPoint(d.latlng).y })
+                    .attr('cy', function(d) { return projection.latLngToLayerPoint(d.latlng).y })
                     .attr('fill', conditionalColor)
                     //.attr('stroke', conditionalColor)
                     .attr('stroke-width', '1.2')
                     .attr('r', function(e) {
-                        console.log('redarw');
                         return map.getZoom() / 9;
                     });
 
                 first = false;
             }
             var circleSvgs = selection.selectAll('circle');
-            console.log(circleSvgs)
             circleSvgs
                 .attr('stroke-width', '1.2')
                 .attr('r', function(e) {
@@ -98,11 +96,6 @@ $.getJSON("./temp/carpark_data.json", function(data) {
                 .style("height", map.getSize().y + 'px')
                 .style("margin-left", topLeft.x + "px")
                 .style("margin-top", topLeft.y + "px");
-
-            //// view only MRTs
-            //var filteredPoints = points.filter(function(p) {
-                //return p.network.toLowerCase().includes("mrt");
-            //});
 
             points = points.filter(function(p) {
                 if(p.LotType === "Y") return false;
